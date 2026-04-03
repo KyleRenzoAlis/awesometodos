@@ -17,7 +17,7 @@ export default function App() {
   const createNewTodo = async (e) => {
     e.preventDefault();
     if (content.length > 3) {
-      const res = await fetch("/api/todos", {
+      const res = await fetch("https://awesometodos-4x29.onrender.com/api/todos", {
         method: "POST",
         body: JSON.stringify({ todo: content }),
         headers: { "Content-Type": "application/json" },

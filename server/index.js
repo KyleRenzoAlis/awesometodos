@@ -1,3 +1,4 @@
+const cors = require("cors");
 require("dotenv").config();
 const express = require("express");
 const { connectToMongoDB } = require("./database");
@@ -5,7 +6,9 @@ const { connectToMongoDB } = require("./database");
 const app = express();
 
 app.use(cors({
-    origin: "https://awesometodos-front.onrender.com" 
+    origin: "https://awesometodos-front.onrender.com", // Your exact frontend link
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"]
 }));
 
 app.use(express.json());
