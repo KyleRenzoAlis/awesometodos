@@ -7,7 +7,7 @@ export default function App() {
 
   useEffect(() => {
     const getTodos = async () => {
-      const res = await fetch("/api/todos");
+      const res = await fetch("https://awesometodos-4x29.onrender.com/api/todos");
       const todos = await res.json();
       setTodos(todos);
     };
