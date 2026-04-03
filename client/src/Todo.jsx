@@ -1,7 +1,7 @@
 export default function Todo(props) {
     
     const updateTodo = async (todoId, todoStatus) => {
-        const res = await fetch(`/api/todos/${todoId}`, {
+        const res = await fetch(`https://awesometodos-4x29.onrender.com/api/todos/${todoId}`, {
             method: "PUT",
             body: JSON.stringify({ status: !todoStatus }), 
             headers: {
@@ -23,7 +23,7 @@ export default function Todo(props) {
     };
 
     const deleteTodo = async (todoId) => {
-        const res = await fetch(`/api/todos/${todoId}`, {
+        const res = await fetch(`https://awesometodos-4x29.onrender.com/api/todos/${todoId}`, {
             method: "DELETE"
         });
         const json = await res.json();
