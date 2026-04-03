@@ -4,6 +4,10 @@ const { connectToMongoDB } = require("./database");
 
 const app = express();
 
+app.use(cors({
+    origin: "https://awesometodos-front.onrender.com" 
+}));
+
 app.use(express.json());
 
 const router = require("./routes");
